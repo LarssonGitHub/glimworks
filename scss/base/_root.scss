@@ -3,4 +3,8 @@
     @each $color, $value in $theme-colors {
         --#{$color}: #{$value};
     }
+
+    --font-sans-serif: #{$font-family-sans-serif};
+    --font-monospace: #{$font-family-monospace};
+
 }
