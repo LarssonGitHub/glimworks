@@ -1,6 +1,9 @@
 // -- COLORS --
 
+
 $theme-colors: (
+    "white": #ffffff,
+    "base-color": #1c1c1c,
     "primary" : #626ED4,
     "secondary" : #343549,
     "success": #2AA39A,
@@ -14,7 +17,7 @@ $theme-colors: (
 
 
 // -- Container -- 
-$container-width: 1200;
+$container-width: 1200 !default;
 
 // -- GRID --  
 $grid-cols: 12 !default;
@@ -39,14 +42,12 @@ $map-grid-props: (
 
 $font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:  SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-// stylelint-enable value-keyword-case
-$font-family-base:  var(--font-sans-serif) !default;
-$font-family-code:   var(--font-monospace) !default;
 
-// $font-size-root effects the value of `rem`, which is used for as well font sizes, paddings and margins
-// $font-size-base effects the font size of the body text
-$font-size-root:              null !default;
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-family-base: var(--font-sans-serif) !default;
+$font-family-code: var(--font-monospace) !default;
+
+$font-size-root: null !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
 
 
 // -- BORDER RADIUS -- 

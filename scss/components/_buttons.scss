@@ -3,5 +3,16 @@
     border-radius: $border-radius;
     padding: 0.5rem 1rem;
     background-color: var(--primary);
-    color: white;
+    color: var(--white);
+}
+
+@each $name, $color in $theme-colors {
+    .btn-#{$name} {
+        background-color: var(--#{$name});
+        color: var(--white);
+
+        &:hover {
+            background-color: adjust-color($color, $lightness: 15%);
+        }
+    }
 }
