@@ -1,5 +1,40 @@
-// COLOR VARIBLES
-$white: white !default;
-$color-dark: #304D6D !default;
-$color-light: #a7cced !default;
-$color-primary: #63ADF2 !default;
+// -- COLORS --
+
+$theme-colors: (
+    "primary" : #626ED4,
+    "secondary" : #343549,
+    "success": #2AA39A,
+    "danger": #EC4561,
+    "warning": #F8B425,
+    "info": #38A5F8,
+    "light": #f8f8fa,
+    "dark": #575c62,
+    "muted": #EDECF1
+) !default;
+
+
+// -- Container -- 
+$container-width: 1200;
+
+// -- GRID --  
+$grid-cols: 12 !default;
+
+// BREAKPOINTS
+$grid-bp-small: 576 !default;
+$grid-bp-medium: 768 !default;
+$grid-bp-large: 992 !default;
+$grid-bp-xlarge: 1200 !default;
+
+// GRID MAP
+$map-grid-props: (
+    '': 0,
+    '-small': $grid-bp-small,
+    '-medium': $grid-bp-medium,
+    '-large': $grid-bp-large,
+    '-xlarge': $grid-bp-xlarge,
+)!default;
+
+
+// -- BORDER RADIUS -- 
+$border-radius: 0.2rem !default;
+
