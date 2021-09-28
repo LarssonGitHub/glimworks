@@ -6,11 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glimworks - Light weight SASS framework</title>
-    <script src="assets/js/app.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link href="assets/css/main.min.css" rel="stylesheet">
+    
 </head>
 
 <body>
+    
     <header>
         <div class="container">
             <div class="row">
@@ -42,6 +45,29 @@
                     <a href="#" class="btn btn-primary btn-small">Small</a>
                     <a href="#" class="btn btn-primary btn-medium">medium</a>
                     <a href="#" class="btn btn-primary btn-large">Large</a>
+                    <h3>Buttons with icons:</h3>
+                    <p><a href="https://ionic.io/ionicons">Ion-icon libs</a></p>
+                    <!-- https://ionic.io/ionicons -->
+                    <h4>Filled</h4>
+                    <a href="#" class="btn btn-primary"><span class="btn-ion-icon">Home<ion-icon class="ion-float-right" name="home"></ion-icon></span></a>
+                    <a href="#" class="btn btn-primary">Chat<ion-icon class="ion-icon-center" name="chatbox"></ion-icon></a>
+                    <a href="#" class="btn btn-primary">Close<ion-icon class="ion-icon-right" name="close"></ion-icon></a>
+                    <h4>Outlined</h4>
+                    <a href="#" class="btn btn-primary">Home<ion-icon class="ion-icon-left" name="home-outline"></ion-icon></a>
+                    <a href="#" class="btn btn-primary">Chat<ion-icon class="ion-icon-center" name="chatbox-outline"></ion-icon></a>
+                    <a href="#" class="btn btn-primary">Close<ion-icon class="ion-icon-right" name="close-outline"></ion-icon></a>
+                    <h2>Animations</h2>
+                    <p>Not specific to only buttons and can be added to all standard html elements</p>
+                    <div id="btn-animation-sample-container" >
+                        <select name="animationSelectName" id="animationSelect">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                          </select>
+                    <a id="animationBtn" class="btn">Hoover over me to see effect!</a>
+                    <button id="btnCopyClipboard">Copy to clipboard</button>
+                    </div>
                     <h2>Styles</h2>
                     <h3>Fancy</h3>
                     <h4>Links</h4>
@@ -56,7 +82,7 @@
             </div>
         </div>
     </header>
-    
+    <script src="assets/js/app.js"></script>
 </body>
 
 </html>
