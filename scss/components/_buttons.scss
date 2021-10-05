@@ -5,6 +5,7 @@
     background-color: var(--primary-color);
     color: var(--white);
 }
+
 @each $name, $color in $theme-colors {
     .btn-#{$name} {
         background-color: var(--#{$name}-color);
@@ -13,6 +14,7 @@
             background-color: darken($color, 15%);
         }
     }
+
     .btn-outline-#{$name} {
         border: 1px solid $color;
         background-color: initial;
@@ -24,29 +26,39 @@
     }
 }
 
-// https://codepen.io/brandyscarney/pen/WWXrLg?editors=1100
-// https://try2explore.com/questions/11467231
-// https://animate.style/
-// .btn-ion-icon {
-//     text-align: center;
-//     line-height: 100%;
-//     }
-//     .btn {
-//         width: 300px;
-//     }
+// padding for buttons
+@each $name, $size in $btn-padding {
+    .btn-padding-#{$name} {
+        padding: calc(#{$size} / 2) $size;
+        // Fallback icon buttons
+        .icon-padding-right {
+            @if $size == initial {
+                padding-left: map-get($btn-padding, "small");
+            } @else {
+                padding-left: $size;
+              }
+        }
+        .icon-padding-left {
+            @if $size == initial {
+                padding-right: map-get($btn-padding, "small");
+            } @else {
+                padding-right: $size;
+              }
+        }
+}}
 
-.btn-ion-icon {
+
+.ion-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    ion-icon {
+}
+
+.icon-padding-right {
         padding-left: 0.5rem;
-    }
 }
 
-@each $name, $size in $btn-sizes {
-    .btn-#{$name} {
-        padding: calc(#{$size} / 2) $size;
-
-    }
+.icon-padding-left {
+        padding-right: 0.5rem;
 }
+

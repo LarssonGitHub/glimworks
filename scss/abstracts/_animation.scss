@@ -1,5 +1,34 @@
 #btn-animation-sample-container {
-    .btn:hover {
-        background-color: red;
-      }
+  .helicopter {
+    animation-name: spin;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  .fade-in {
+    animation-name: fade-in;
+    animation-duration: 1000ms;
+    // animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+   opacity: 1;
+  }
 }
